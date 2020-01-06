@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"os"
 	"strings"
-	// "strconv"
 )
 
 type Animal struct {
