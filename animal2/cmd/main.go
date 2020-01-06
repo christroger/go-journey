@@ -55,7 +55,7 @@ func main() {
 	fmt.Println("Query example: query tweety eat")
 	var scanner = bufio.NewScanner(os.Stdin)
 	
-	var animalList = make(map[string]interface{})
+	var animalList = make(map[string]Animal)
 
 	for true {
 		var a Animal
@@ -98,14 +98,7 @@ func main() {
 				continue
 			}
 
-			switch da := desiredAnimal.(type) {
-			case Cow:
-				a = da
-			case Snake:
-				a = da
-			case Bird:
-				a = da
-			}
+			a = desiredAnimal
 			switch action {
 			case "speak":
 				a.Speak()
